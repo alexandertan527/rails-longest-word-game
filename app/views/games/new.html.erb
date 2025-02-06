@@ -1,0 +1,60 @@
+<div class="m-5">
+  <h1>New game</h1>
+</div>
+
+<div class="m-5 d-flex flex-row">
+    <div class="fs-1 text-bg-primary m-3 d-flex align-items-center justify-content-center" style="width: 75px; height: 75px">
+      <p><%= @letters[0]%></p>
+    </div>
+
+    <div class="fs-1 text-bg-primary m-3 d-flex align-items-center justify-content-center" style="width: 75px; height: 75px">
+      <p><%= @letters[1]%></p>
+    </div>
+
+    <div class="fs-1 text-bg-primary m-3 d-flex align-items-center justify-content-center" style="width: 75px; height: 75px">
+      <p><%= @letters[2]%></p>
+    </div>
+
+    <div class="fs-1 text-bg-primary m-3 d-flex align-items-center justify-content-center" style="width: 75px; height: 75px">
+      <p><%= @letters[3]%></p>
+    </div>
+
+    <div class="fs-1 text-bg-primary m-3 d-flex align-items-center justify-content-center" style="width: 75px; height: 75px">
+      <p><%= @letters[4]%></p>
+    </div>
+
+    <div class="fs-1 text-bg-primary m-3 d-flex align-items-center justify-content-center" style="width: 75px; height: 75px">
+      <p><%= @letters[5]%></p>
+    </div>
+
+    <div class="fs-1 text-bg-primary m-3 d-flex align-items-center justify-content-center" style="width: 75px; height: 75px">
+      <p><%= @letters[6]%></p>
+    </div>
+
+    <div class="fs-1 text-bg-primary m-3 d-flex align-items-center justify-content-center" style="width: 75px; height: 75px">
+      <p><%= @letters[7]%></p>
+    </div>
+
+    <div class="fs-1 text-bg-primary m-3 d-flex align-items-center justify-content-center" style="width: 75px; height: 75px">
+      <p><%= @letters[8]%></p>
+    </div>
+
+    <div class="fs-1 text-bg-primary m-3 d-flex align-items-center justify-content-center" style="width: 75px; height: 75px">
+      <p><%= @letters[9]%></p>
+    </div>
+</div>
+
+<div class="mx-5">
+  <h4>What is the longest word you can find?</h4>
+
+  <form action="/score" method="post" data-turbo="false">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :letters, @letters %>
+    <%= hidden_field_tag :start, @start_time %>
+    <div class="input-group input-group-lg">
+    <input type="text" class="form-control" name="word">
+    <input type="submit" class="input-group-text" value="Play" id="inputGroup-sizing-lg">
+  </div>
+  </form>
+
+</div>
